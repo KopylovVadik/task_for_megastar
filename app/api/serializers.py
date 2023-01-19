@@ -4,19 +4,16 @@ from rest_framework.serializers import ModelSerializer
 from api.models import Writer, Book
 
 
-class BookInfoSerializer(ModelSerializer):
+class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ('name',)
+        fields = ('id', 'name',)
 
 
-class WriterSerializer(ModelSerializer):
-    book = BookInfoSerializer(
-        source='books',
-        many=True,
-        read_only=True,
-    )
+class WriterSerializer(serializers.ModelSerializer):
+    books = BookSerializer(many=True)
+
     class Meta:
         model = Writer
-        fields = ('id', 'name', 'book')
+        fields = ('id', 'name', 'books',)
 

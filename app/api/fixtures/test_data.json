@@ -18,20 +18,14 @@
 
     "fields": {
       "author_id": 3,
-      "name": {
-        "id": "56",
         "name": "Капитанская дочка"
-      }
     }
   },
   {
     "model": "api.book",
     "fields": {
       "author_id": 2,
-      "name": {
-        "id": "56",
         "name": "Письмо к женщине"
-      }
     }
   }
 ]
