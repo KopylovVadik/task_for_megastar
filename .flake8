@@ -1,0 +1,8 @@
+[flake8]
+exclude = .git, __pycache__, env, venv, migrations, manage.py,
+ ../src/config/settings/common.py
+max-line-length = 79
+ignore = I201
+max-complexity = 8
+inline-quotes = '
+application-import-names = api
